@@ -160,6 +160,18 @@ if ((now - last_tick) >= dt) {
 > 仓库没有包含 Keil 的构建产物（`MDK-ARM/PID_learn1/`），克隆后第一次编译全量重编即可。
 > 为控制体积，`Drivers/CMSIS` 下 DSP / NN / RTOS / Lib 等未被工程引用的目录也未提交，不影响编译。
 
+全量重编实测（ARM Compiler 6.23）：
+
+```
+Program Size: Code=17164  RO-data=776  RW-data=12  ZI-data=1996
+0 Error(s), 0 Warning(s)
+```
+
+| 项 | 占用 | 容量 | 比例 |
+|---|---|---|---|
+| Flash | 17164 + 776 + 12 ≈ **17.5 KB** | 64 KB | 27% |
+| RAM | 12 + 1996 ≈ **2.0 KB** | 20 KB | 10% |
+
 ## 6. 上位机
 
 1. 打开 VOFA+，新增串口，波特率 115200
