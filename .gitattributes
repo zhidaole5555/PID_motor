@@ -1,0 +1,11 @@
+# 仓库内统一用 LF，检出时按平台自动转换
+* text=auto eol=lf
+
+# 二进制文件不做任何换行转换
+*.hex  binary
+*.bin  binary
+*.axf  binary
+*.lib  binary
+*.pdf  binary
+*.png  binary
+*.jpg  binary

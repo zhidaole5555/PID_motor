@@ -1,0 +1,54 @@
+# ============================================================
+# Keil MDK 构建产物（每次编译都会重新生成，不该进仓库）
+# ============================================================
+MDK-ARM/PID_learn1/
+MDK-ARM/DebugConfig/
+MDK-ARM/RTE/
+MDK-ARM/*.uvguix.*
+MDK-ARM/*.scvd
+
+*.o
+*.d
+*.crf
+*.axf
+*.elf
+*.hex
+*.bin
+*.map
+*.lst
+*.lnp
+*.dep
+*.iex
+*.htm
+*.bak
+*.log
+
+# ============================================================
+# CubeMX 生成记录（可由 .ioc 重新生成）
+# ============================================================
+.mxproject
+
+# ============================================================
+# CMSIS 完整包中本项目未使用的部分
+# 工程包含路径只用到 CMSIS/Include 与 CMSIS/Device/ST/STM32F1xx/Include
+# 下面这些是 ST 打包进来的 DSP / NN / RTOS 库和文档，与程序无关
+# 本地保留、不进仓库，仓库体积从 70MB 降到约 5MB
+# ============================================================
+Drivers/CMSIS/DSP/
+Drivers/CMSIS/Lib/
+Drivers/CMSIS/NN/
+Drivers/CMSIS/RTOS/
+Drivers/CMSIS/RTOS2/
+Drivers/CMSIS/Core/
+Drivers/CMSIS/Core_A/
+Drivers/CMSIS/docs/
+Drivers/CMSIS/Device/ST/STM32F1xx/Source/
+
+# ============================================================
+# 编辑器 / 系统
+# ============================================================
+.workbuddy/
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini
